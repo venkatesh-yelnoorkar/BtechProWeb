@@ -1,0 +1,16 @@
+{% extends "similarity_app/base.html" %}
+
+{% block content %}
+    <div class="jumbotron">
+        <h1 class="display-4">Paper Similarity</h1>
+        <p class="lead">Paper Similarity Details</p>
+        <hr class="my-4">
+        <p>We prsent two ways to paper similarity, first using title and second using abstract.</p>
+        <p class="lead">
+            <a class="btn btn-primary btn-lg" href="{% url 'similarity:title' %}" role="button">Title</a>
+            <a class="btn btn-primary btn-lg" href="{% url 'similarity:abstract' %}" role="button">Abstract</a>
+
+        </p>
+    </div>
+
+{% endblock content %}

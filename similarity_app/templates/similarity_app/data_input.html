@@ -1,0 +1,18 @@
+{% extends "similarity_app/base.html" %}
+{% block content %}
+    <div class="jumbotron">
+        <h1>
+            {{ type }} based similarity.
+        </h1>
+    </div>    
+    
+    <div class="container">
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <br>
+            <br>
+            <input class="btn btn-primary" type="submit" value="Submit">
+        </form>
+    </div>
+{% endblock content %}

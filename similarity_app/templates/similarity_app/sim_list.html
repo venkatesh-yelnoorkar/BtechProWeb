@@ -1,0 +1,35 @@
+{% extends "similarity_app/base.html" %}
+{% block content %}
+    <div class = "jumbotron">
+        <h1>
+            {{ type }} based similarity results.
+        </h1>
+        <h3>
+            Input {{ type }}:
+        </h3>
+        <h5>
+            {{ data }}
+        </h5>
+    
+    </div>
+
+    <div class="list-group">
+        
+        {% for paper in similar_list %}
+            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start ">
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">{{ paper.title }}</h5>
+                    <small>{{ paper.similarity }}</small>
+                </div>
+                <p class="mb-1">{{ paper.abstract }}</p>
+                <small>{{ paper.id }}</small>
+            </a>  
+        {% endfor %}
+
+        
+        
+      </div>
+    
+
+
+{% endblock content %}
